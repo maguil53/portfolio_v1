@@ -1,0 +1,99 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: #000;
+  position: absolute;
+  z-index: 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.container {
+  display: grid;
+  //   background: #000;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.name-glitch {
+  color: #fff;
+}
+
+.enter:link,
+.enter:visited {
+  font-size: 2em;
+  margin-left: 2.5em;
+  color: #fff;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+// Made relative so we can make ::before and ::after absolute and move elements RELATIVE to .main div
+.main {
+  position: relative;
+}
+
+.name-glitch {
+  &::before,
+  &::after {
+    display: block;
+    content: "Marco Aguilar";
+    position: absolute;
+    opacity: 1;
+  }
+  &::after {
+    // color: #f0f;
+    color: red;
+    display: block;
+    top: 17%;
+    z-index: -2;
+    content: "Marco Aguilar";
+  }
+  &::before {
+    // color: #0ff;
+    color: blue;
+    top: 17%;
+    display: block;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::before {
+      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    }
+    &::after {
+      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
+        infinite;
+    }
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, 5px);
+  }
+  40% {
+    transform: translate(-5px, -5px);
+  }
+  60% {
+    transform: translate(5px, 5px);
+  }
+  80% {
+    transform: translate(5px, -5px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
