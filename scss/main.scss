@@ -3,9 +3,19 @@ html {
   height: 100%;
   width: 100%;
   margin: 0;
-  background: #000;
-  position: absolute;
-  z-index: 0;
+  background: #fff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.portrait {
+  width: 250px;
+  height: 250px;
+  // Remember our css file will be in dist/css so your path must be defined carefully
+  background: url("../img/portrait.jpg");
+  background-size: cover;
+  // Making a circle for image
+  border-radius: 50%;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -14,27 +24,12 @@ h1 {
 
 .container {
   display: grid;
-  //   background: #000;
 
   align-items: center;
   justify-content: center;
+  font-size: 50px;
 
   height: 100%;
-}
-
-.name-glitch {
-  color: #fff;
-}
-
-.enter:link,
-.enter:visited {
-  font-size: 2em;
-  margin-left: 2.5em;
-  color: #fff;
-  padding: 0.5em 1em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
 }
 
 // Made relative so we can make ::before and ::after absolute and move elements RELATIVE to .main div
@@ -42,58 +37,61 @@ h1 {
   position: relative;
 }
 
-.name-glitch {
-  &::before,
-  &::after {
-    display: block;
-    content: "Marco Aguilar";
-    position: absolute;
-    opacity: 1;
-  }
-  &::after {
-    // color: #f0f;
-    color: red;
-    display: block;
-    top: 17%;
-    z-index: -2;
-    content: "Marco Aguilar";
-  }
-  &::before {
-    // color: #0ff;
-    color: blue;
-    top: 17%;
-    display: block;
-    z-index: -1;
-  }
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 
-  &:hover {
-    &::before {
-      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-    }
-    &::after {
-      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
-        infinite;
-    }
+// Using mixin to generate 2 keyframes, 1 need for vendor-prefix (same exact values)
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
   }
 }
 
-@keyframes glitch {
+@include keyframes(bounceInDown) {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
   0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-5px, 5px);
-  }
-  40% {
-    transform: translate(-5px, -5px);
+    opacity: 0;
+    -webkit-transform: translate3d(0, -5000px, 0);
+    transform: translate3d(0, -5000px, 0);
   }
   60% {
-    transform: translate(5px, 5px);
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
   }
-  80% {
-    transform: translate(5px, -5px);
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
   }
-  to {
-    transform: translate(0);
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
   }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+// Animations will begin as soon as page is loaded,
+// If you want animation to begin as soon as you reach a certain point on a page,
+// then look into jquery "waypoints"
+.main-attraction {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
 }
