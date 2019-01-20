@@ -20,6 +20,13 @@ $background-gradient: linear-gradient(
   }
 }
 
+@mixin easeInOut {
+  // 1st parameter: we want to "transition" any attribute that is "transitionable"
+  // 2nd parameter: Time it takes
+  // 3nd parameter: The motion
+  transition: all 150ms ease-in-out;
+}
+
 // Media Query Mixins
 // We will expand these in _mobile.scss. For now, we're specfiying the breakpoint (width),
 // where our media queries will take affect.

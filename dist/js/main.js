@@ -19,6 +19,8 @@ function addBlur() {
 
     header[0].classList.remove("unblur-glass");
     mainContent.classList.remove("unblur-glass");
+
+    // hamburger.classList.add("nav-rotate");
     showBlur = true;
   } else {
     blurryNavBar.classList.remove("blurry-background");
