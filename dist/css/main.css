@@ -1,10 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
 body,
 html {
   height: 100%;
   width: 100%;
   margin: 0;
-  background: #fff;
+  background: linear-gradient(0deg, #020024 0%, #090979 10%, #00d4ff 100%);
   font-family: "Courier New", Courier, monospace; }
+
+header {
+  background: #000;
+  position: fixed;
+  text-align: center;
+  z-index: 999;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.logo {
+  margin-left: 68px; }
+
+nav {
+  background: #000;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 50vw;
+  text-align: left;
+  transform: scale(1, 0);
+  right: 0; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  nav a {
+    color: #fff;
+    text-decoration: none; }
+
+.nav-toggle {
+  display: none; }
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1); }
+
+.nav-toggle-label {
+  /* This will remove label outside the normal flow of the document and is positioned
+    relative to it's parent (In this case it's the "header" element).  */
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  width: 100px;
+  z-index: 20;
+  height: 100%;
+  /* Using flex-box just because it'll make it easier to center our label (vertically) after
+  we set height to 100% */
+  display: flex;
+  align-items: center; }
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative; }
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute; }
+
+.nav-toggle-label span::before {
+  bottom: 7px; }
+
+.nav-toggle-label span::after {
+  top: 7px; }
 
 .portrait {
   width: 250px;
@@ -15,7 +93,7 @@ html {
   background-repeat: no-repeat; }
 
 h1 {
-  font-size: 3em; }
+  font-size: 2em; }
 
 .container {
   display: grid;
@@ -88,3 +166,8 @@ h1 {
 .main-attraction {
   -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown; }
+
+@media screen and (max-width: 500px) {
+  .portrait {
+    width: 190px;
+    height: 190px; } }

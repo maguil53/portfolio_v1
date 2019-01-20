@@ -1,0 +1,50 @@
+$primary-color: #fff;
+$secondary-color: #000;
+
+$navbar-color: #000;
+
+// Not sure if I want to use a gradient for background yet (temporary)
+$background-gradient: linear-gradient(
+  0deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(9, 9, 121, 1) 10%,
+  rgba(0, 212, 255, 1) 100%
+);
+
+// Will determine text-color depending on your primary/secondary colors
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Media Query Mixins
+// We will expand these in _mobile.scss. For now, we're specfiying the breakpoint (width),
+// where our media queries will take affect.
+@mixin mediaSm {
+  // Phones. 500px and under.
+  @media screen and (max-width: 500px) {
+    // Anything you implement in _mobile.scss will be placed in here
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

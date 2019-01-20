@@ -11,10 +11,28 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" href="" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <header>
+      <h1 class="logo">Logo</h1>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+      <label for="nav-toggle" class="nav-toggle-label"> <span></span> </label>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="container">
       <!-- The first thing the user sees, might change height to 100vh -->
       <div class="main">
@@ -24,6 +42,7 @@
         </div>
       </div>
     </div>
+
     <script src="js/main.js"></script>
   </body>
 </html>

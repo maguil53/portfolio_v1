@@ -1,11 +1,124 @@
+@import "config";
+@import "navbar";
+
+// Define the main colors for your layout in a "_config.scss" file
+// (along with your media queries and mixins). Don't forget to import this file before
+// anything else.
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body,
 html {
   height: 100%;
   width: 100%;
   margin: 0;
-  background: #fff;
+  // background: #fff;
+  background: $background-gradient;
+  // background: linear-gradient(to bottom right, #1afba5, #41acff);
   font-family: "Courier New", Courier, monospace;
 }
+
+// navbar (Start)
+header {
+  background: $navbar-color;
+  position: fixed;
+  text-align: center;
+  z-index: 999;
+  width: 100%;
+  color: set-text-color($navbar-color);
+
+  // Using this to move Logo to left side of page
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+// Matching margin of hamburger on the right
+.logo {
+  margin-left: 68px;
+}
+
+nav {
+  background: $navbar-color;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 50vw;
+  text-align: left;
+  transform: scale(1, 0);
+  right: 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: set-text-color($navbar-color);
+    text-decoration: none;
+  }
+}
+
+// Gets rid of checkbox
+.nav-toggle {
+  display: none;
+}
+
+// Will expand navbar items when our .nav-toggle is checked
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle-label {
+  /* This will remove label outside the normal flow of the document and is positioned
+    relative to it's parent (In this case it's the "header" element).  */
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  width: 100px;
+  // Will make sure hamburger is on top of nav links
+  z-index: 20;
+
+  height: 100%;
+  /* Using flex-box just because it'll make it easier to center our label (vertically) after
+  we set height to 100% */
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+// Makes 3 lines visible (by setting content to "")
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+// navbar (End)
 
 .portrait {
   width: 250px;
@@ -19,7 +132,7 @@ html {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .container {
@@ -35,6 +148,7 @@ h1 {
 // Made relative so we can make ::before and ::after absolute and move elements RELATIVE to .main div
 .main {
   position: relative;
+  // height: 100vh;
 }
 
 .animated {
@@ -95,3 +209,5 @@ h1 {
   -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
 }
+
+@import "mobile";
