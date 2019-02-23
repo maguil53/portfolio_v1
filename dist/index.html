@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header>
+    <header id="navbar">
       <span class="nav-background"></span>
       <h1 class="logo">Logo</h1>
 
@@ -50,6 +50,12 @@
       </div>
     </div>
 
+    <!-- Page will always load from the top of the page -->
+    <script>
+      window.onbeforeunload = function() {
+        window.scrollTo(0, 0);
+      };
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

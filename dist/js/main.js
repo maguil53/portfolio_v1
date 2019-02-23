@@ -31,3 +31,26 @@ function addBlur() {
     showBlur = false;
   }
 }
+
+// This code-block allows us to hide navbar onScroll.
+// Equivalent to JQuery's $(document).ready()
+document.addEventListener("DOMContentLoaded", event => {
+  let prevScrollTop = 0;
+  let currentScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+
+  window.onscroll = () => {
+    let spaceAbove = window.pageYOffset;
+    let navHeight = navbar.style.height;
+
+    currentScrollTop = spaceAbove;
+
+    if (prevScrollTop < currentScrollTop && spaceAbove > navHeight * 2) {
+      navbar.classList.add("hide-nav");
+    } else if (prevScrollTop > currentScrollTop && !(spaceAbove <= navHeight)) {
+      navbar.classList.remove("hide-nav");
+    }
+
+    prevScrollTop = currentScrollTop;
+  };
+});

@@ -1,24 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box; }
-
-body,
-html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  background: linear-gradient(0deg, #020024 0%, #090979 10%, #00d4ff 100%);
-  font-family: "Courier New", Courier, monospace; }
-
-.blur-glass {
-  filter: blur(8px);
-  transition: filter 250ms ease-in-out; }
-
-.unblur-glass {
-  filter: blur(0);
-  transition: filter 250ms ease-in-out; }
-
 header {
   background: #000;
   position: fixed;
@@ -77,7 +56,7 @@ nav {
 
 .nav-toggle-label {
   /* This will remove label outside the normal flow of the document and is positioned
-    relative to it's parent (In this case it's the "header" element).  */
+      relative to it's parent (In this case it's the "header" element).  */
   position: absolute;
   margin: 0;
   padding-left: 2em;
@@ -87,7 +66,7 @@ nav {
   z-index: 20;
   height: 100%;
   /* Using flex-box just because it'll make it easier to center our label (vertically) after
-  we set height to 100% */
+    we set height to 100% */
   display: flex;
   align-items: center; }
 
@@ -133,6 +112,27 @@ nav {
   top: 7px;
   transform: rotate(0deg);
   transition: all 150ms ease-in-out; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body,
+html {
+  height: 200vh;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(0deg, #020024 0%, #090979 10%, #00d4ff 100%);
+  font-family: "Courier New", Courier, monospace; }
+
+.blur-glass {
+  filter: blur(8px);
+  transition: filter 250ms ease-in-out; }
+
+.unblur-glass {
+  filter: blur(0);
+  transition: filter 250ms ease-in-out; }
 
 .portrait {
   width: 250px;
@@ -236,7 +236,10 @@ h1 {
     display: none; }
   header {
     display: grid;
-    grid-template-columns: 1fr 3fr; }
+    grid-template-columns: 1fr 3fr;
+    transition: all 0.5s; }
+    header.hide-nav {
+      transform: translateY(-80px); }
   .logo {
     grid-column: 1 / span 1;
     justify-self: start;
