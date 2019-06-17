@@ -1,22 +1,49 @@
+@import "config";
+@import "navbar";
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+// Define the main colors for your layout in a "_config.scss" file
+// (along with your media queries and mixins). Don't forget to import this file before
+// anything else.
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body,
 html {
-  height: 100%;
+  // height: 100%;
+  height: 200vh; // Used to test out "Hide" effect on navbar when scrolling
+
   width: 100%;
   color: white;
   margin: 0;
+  background: $background-gradient;
+  // background: linear-gradient(to bottom right, #1afba5, #41acff);
   font-family: "Courier New", Courier, monospace;
+}
+
+// Initially, this class is not assigned to any element
+.blur-glass {
+  filter: blur(8px);
+  transition: filter 250ms ease-in-out;
+}
+
+.unblur-glass {
+  filter: blur(0);
+  transition: filter 250ms ease-in-out;
 }
 
 .portrait {
   width: 250px;
   height: 250px;
   // Remember our css file will be in dist/css so your path must be defined carefully
-  background: url("../img/portrait.jpg");
+  background: url("../img/portrait2.jpg");
   background-size: cover;
   // Making a circle for image
   border-radius: 50%;
@@ -24,7 +51,7 @@ html {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .container {
@@ -40,6 +67,7 @@ h1 {
 // Made relative so we can make ::before and ::after absolute and move elements RELATIVE to .main div
 .main {
   position: relative;
+  // height: 100vh;
 }
 
 .animated {
@@ -138,3 +166,5 @@ h1 {
   -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
 }
+
+@import "media-queries";
