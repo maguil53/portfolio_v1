@@ -18,13 +18,10 @@
 body,
 html {
   // height: 100%;
-  height: 200vh; // Used to test out "Hide" effect on navbar when scrolling
-
+  height: 100%;
   width: 100%;
   color: white;
   margin: 0;
-  background: $background-gradient;
-  // background: linear-gradient(to bottom right, #1afba5, #41acff);
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -39,15 +36,8 @@ html {
   transition: filter 250ms ease-in-out;
 }
 
-.portrait {
-  width: 250px;
-  height: 250px;
-  // Remember our css file will be in dist/css so your path must be defined carefully
-  background: url("../img/portrait2.jpg");
-  background-size: cover;
-  // Making a circle for image
-  border-radius: 50%;
-  background-repeat: no-repeat;
+.title {
+  font-size: 2.5rem;
 }
 
 h1 {
@@ -70,20 +60,16 @@ h1 {
   // height: 100vh;
 }
 
+#main-description {
+  margin-left: 35px;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
-// #background {
-//   position: fixed;
-//   top: -50%;
-//   left: -50%;
-//   width: 200%;
-//   height: 200%;
-// }
 
 #overlay {
   position: absolute;
@@ -93,15 +79,8 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: -9;
-}
-
-#overlay-text {
-  font-size: 1rem;
-  position: absolute;
-  top: 55%;
-  left: 38%;
 }
 
 #background img {
@@ -136,26 +115,29 @@ h1 {
   }
 
   0% {
-    opacity: 0;
+    opacity: 0.1;
     -webkit-transform: translate3d(0, -5000px, 0);
     transform: translate3d(0, -5000px, 0);
   }
   60% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 25px, 0);
-    transform: translate3d(0, 25px, 0);
+    opacity: 0.3;
+    -webkit-transform: translate3d(0, 65px, 0);
+    transform: translate3d(0, 65px, 0);
   }
   75% {
-    -webkit-transform: translate3d(0, -10px, 0);
-    transform: translate3d(0, -10px, 0);
+    opacity: 0.9;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
   }
   90% {
-    -webkit-transform: translate3d(0, 5px, 0);
-    transform: translate3d(0, 5px, 0);
+    opacity: 0.98;
+    -webkit-transform: translate3d(0, 35px, 0);
+    transform: translate3d(0, 35px, 0);
   }
   100% {
-    -webkit-transform: none;
-    transform: none;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 35px, 0);
+    transform: translate3d(0, 35px, 0);
   }
 }
 

@@ -1,6 +1,7 @@
 // Remember that you can access certain variables because in main.scss (Your main sass file)
 // because you're importing "config", which is the file where you create all your variables
 header {
+  height: 75px;
   background: $navbar-color;
   position: fixed;
   text-align: center;
