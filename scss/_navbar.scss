@@ -10,9 +10,24 @@ header {
   color: set-text-color($navbar-color);
 
   // Using this to move Logo to left side of page
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+
+  // Commenting this out because it doesn't seem to do anything.
+  // In fact, it seems like I already made the "header" a Grid,
+  // so it doesn't make sense to use flex.
+
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: flex-start;
+}
+
+// These is here because our div on top of our "logo"
+// and the 4 sections are being pushed down. Making
+// the position: absolute will prevent the div from getting
+// in the way of any margins we want to put to center the items
+// in our navbar.
+.nav-background {
+  position: absolute;
+  z-index: -1;
 }
 
 .blurry-background {
@@ -29,6 +44,7 @@ header {
 .logo {
   // Matching margin of hamburger on the right
   margin-left: 1em;
+  margin-top: 0.5em;
 }
 
 // Initially, this is hidden from the user (Hence scale(0,1).)
@@ -91,8 +107,12 @@ nav {
   z-index: 20;
 
   height: 100%;
-  /* Using flex-box just because it'll make it easier to center our label (vertically) after
-    we set height to 100% */
+  /* 
+    Using flex-box just because it'll make it easier to center our label (vertically) after
+    we set height to 100% 
+
+    This is for the hamburger (vertical)
+    */
   display: flex;
   align-items: center;
 }
