@@ -3,6 +3,62 @@
   .main-title {
     font-size: 1.5rem;
   }
+
+  // "About" section
+  .about-content {
+    height: 10vh;
+    grid-template-columns: 30px 3fr 3fr 1fr 30px;
+  }
+
+  .about-tools {
+    justify-items: end;
+  }
+
+  .line-vertical {
+    height: 20vh;
+  }
+
+  #java {
+    margin-right: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #android {
+    margin-right: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #vscode {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #sass {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #html {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #css {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #javascript {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #github {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @include mediaMd {
@@ -20,6 +76,65 @@
     justify-self: start;
     // Moves logo to left so everything seems proportional on phone display
     margin-left: 1em;
+  }
+
+  // "About" section
+
+  .about-content {
+    height: 90vh;
+    grid-template-columns: 30px 2fr 1fr 2fr 30px;
+  }
+
+  .about-intro {
+    font-size: 1.1em;
+  }
+
+  .line-horizontal {
+    width: 13vw;
+  }
+
+  .line-vertical {
+    height: 24vh;
+  }
+
+  #java {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #android {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #vscode {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #sass {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #html {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #css {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #javascript {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #github {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -43,6 +158,63 @@
     justify-self: start;
     // Moves logo to left so everything seems proportional on phone display
     margin-left: 1em;
+  }
+
+  // "About" section
+  .about-content {
+    height: 100vh;
+  }
+
+  .about-intro {
+    font-size: 1.4em;
+  }
+
+  .line-horizontal {
+    width: 30vw;
+  }
+
+  .line-vertical {
+    height: 25vh;
+  }
+
+  #java {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #android {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #vscode {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #sass {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #html {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #css {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #javascript {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #github {
+    max-width: 100%;
+    height: auto;
   }
 }
 
