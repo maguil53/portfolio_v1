@@ -237,9 +237,23 @@ nav {
 .muse-heading {
   grid-column-start: 3;
   grid-row-start: 2;
-  font-size: 2rem;
+  font-size: 4rem;
+  font-weight: bold;
   justify-self: center;
-  color: grey; }
+  align-self: start;
+  color: grey;
+  margin-bottom: 0.5em; }
+
+.muse-heading p::after {
+  content: "";
+  position: relative;
+  display: block;
+  z-index: 100;
+  background: grey;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  height: 2px; }
 
 .muse-image {
   grid-column-start: 2;
