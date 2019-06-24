@@ -211,7 +211,7 @@ nav {
 
 .projects-container {
   background: #1f5fa8;
-  height: 200vh;
+  height: 210vh;
   display: grid;
   align-items: center;
   justify-items: center; }
@@ -219,11 +219,11 @@ nav {
 .projects-muse {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  height: 100vh;
+  height: 110vh;
   width: 90vw;
   background: black;
   display: grid;
-  grid-template-columns: 0.2fr 1fr 3fr 0.2fr;
+  grid-template-columns: 0.2fr 1fr 3fr 0.3fr 0.2fr;
   grid-template-rows: 0.3fr 0.2fr 1fr 0.5fr; }
 
 .projects-heading {
@@ -241,7 +241,7 @@ nav {
   font-weight: bold;
   justify-self: center;
   align-self: start;
-  color: grey;
+  color: #a2a2a2;
   margin-bottom: 0.5em; }
 
 .muse-heading p::after {
@@ -249,7 +249,7 @@ nav {
   position: relative;
   display: block;
   z-index: 100;
-  background: grey;
+  background: #a2a2a2;
   border-radius: 10px;
   left: 0;
   right: 0;
@@ -258,7 +258,7 @@ nav {
 .muse-image {
   grid-column-start: 2;
   grid-row-start: 3;
-  grid-row-end: 4; }
+  grid-row-end: 5; }
 
 .muse-image img {
   border: 1px solid grey;
@@ -268,9 +268,7 @@ nav {
   grid-column-start: 3;
   grid-row-start: 3;
   font-size: 1.4rem;
-  display: grid;
-  grid-template-columns: 1fr 0.3fr;
-  grid-template-rows: 1fr 0.2fr; }
+  color: #a2a2a2; }
 
 .muse-description-text {
   grid-column-start: 1;
@@ -279,16 +277,17 @@ nav {
   grid-row-end: 2; }
 
 .muse-technologies {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  align-self: end;
+  grid-column-start: 3;
+  grid-row-start: 4;
+  font-size: 1.3rem;
+  align-self: center;
   color: #14ff9b; }
 
 .muse-technologies-octocat {
-  grid-column-start: 2;
-  grid-row-start: 2;
+  grid-column-start: 4;
+  grid-row-start: 4;
   justify-self: end;
-  align-self: end; }
+  align-self: start; }
 
 .projects-acm {
   border-bottom-left-radius: 10px;
@@ -315,6 +314,9 @@ html {
   margin: 0;
   font-family: "Courier New", Courier, monospace; }
 
+body {
+  background: #1f5fa8; }
+
 .blur-glass {
   filter: blur(8px);
   transition: filter 250ms ease-in-out; }
@@ -334,7 +336,8 @@ html {
   height: 100vh; }
 
 .main {
-  position: relative; }
+  position: relative;
+  z-index: 10; }
 
 #main-description {
   margin-left: 35px; }
@@ -354,10 +357,10 @@ html {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: -9; }
+  z-index: 5; }
 
 #background img {
-  z-index: -10;
+  z-index: 4;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -480,6 +483,8 @@ html {
     grid-template-columns: 30px 2fr 1fr 2fr 30px; }
   .about-intro {
     font-size: 1.1em; }
+  .about-header {
+    font-size: 1.7rem; }
   .line-horizontal {
     width: 13vw; }
   .line-vertical {
@@ -582,3 +587,76 @@ html {
     display: inline;
     margin-left: 3em;
     bottom: 0; } }
+
+@media screen and (max-width: 500px) {
+  .muse-image img {
+    width: 100%;
+    height: auto; } }
+
+@media screen and (max-width: 768px) {
+  .projects-muse {
+    height: 160vh;
+    grid-template-columns: 30px 0.8fr 1fr 30px;
+    grid-template-rows: 0.2fr 0.2fr 0.8fr 1fr; }
+  .projects-heading {
+    align-self: start;
+    justify-self: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2; }
+  .muse-heading {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    font-size: 3.6rem;
+    justify-self: start; }
+  .muse-description {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4; }
+  .muse-image {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3; }
+  .muse-technologies {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    align-self: start;
+    margin-left: 15px;
+    font-size: 1.3rem; }
+  .muse-technologies-octocat {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    justify-self: start; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects-muse {
+    height: 125vh;
+    grid-template-columns: 0.2fr 1fr 3fr 0.3fr 0.2fr;
+    grid-template-rows: 0.3fr 0.2fr 1fr 0.5fr; }
+  .projects-heading {
+    align-self: start;
+    font-size: 1.7rem; }
+  .muse-heading {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: start; }
+  .muse-description {
+    align-self: start;
+    grid-column-start: 3;
+    grid-column-end: 5; }
+  .muse-image {
+    grid-row-start: 3; }
+  .muse-technologies {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    align-self: center;
+    font-size: 1.4rem; }
+  .muse-technologies-octocat {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    justify-self: end;
+    align-self: start; } }

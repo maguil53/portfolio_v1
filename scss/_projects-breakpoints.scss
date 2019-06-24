@@ -1,0 +1,176 @@
+@include mediaSm {
+  .muse-image img {
+    width: 100%;
+    height: auto;
+  }
+  // ***************
+  // For some reason, this isn't working.
+  // All the changes below aren't being updated in page.
+  // But for some reason when I add * { color : red },
+  // the changes are reflected.
+
+  //   .projects-muse {
+  //     height: 100vh;
+
+  //     grid-template-columns: 0.8fr 1fr;
+  //     grid-template-rows: 0.2fr 0.2fr 0.8fr 0.2fr 1fr;
+  //   }
+  //   .projects-heading {
+  //     grid-column-start: 1;
+  //     grid-column-end: 3;
+  //     grid-row-start: 1;
+  //   }
+
+  //   .muse-heading {
+  //     font-size: 0.2rem;
+  //     grid-column-start: 1;
+  //     grid-row-start: 2;
+  //   }
+
+  //   .muse-technologies-octocat {
+  //     grid-column-start: 2;
+  //     grid-row-start: 2;
+  //   }
+
+  //   .muse-image {
+  //     grid-column-start: 1;
+  //     grid-row-start: 3;
+  //   }
+
+  //   .muse-technologies {
+  //     grid-column-start: 1;
+  //     grid-row-start: 4;
+  //     font-size: 0.6rem;
+  //   }
+
+  //   .muse-description {
+  //     font-size: 1.1em;
+  //   }
+
+  //   //   .muse-image {
+  //   //     width: 30%;
+  //   //     height: auto;
+  //   //   }
+
+  //   .muse-technologies {
+  //     grid-column-start: 1;
+  //     grid-row-start: 4;
+  //   }
+}
+
+@include mediaMd {
+  .projects-muse {
+    height: 160vh;
+
+    grid-template-columns: 30px 0.8fr 1fr 30px;
+    grid-template-rows: 0.2fr 0.2fr 0.8fr 1fr;
+  }
+
+  .projects-heading {
+    align-self: start;
+    justify-self: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .muse-heading {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    font-size: 3.6rem;
+    justify-self: start;
+  }
+
+  .muse-description {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+  }
+  .muse-image {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    // align-self: center;
+  }
+
+  // **************
+  // This is used to resize the image of
+  // your Muse app.
+  //   .muse-image img {
+  //     float: right;
+  //     // width: 100%;
+  //     // height: auto;
+  //   }
+
+  .muse-technologies {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    align-self: start;
+    margin-left: 15px;
+    font-size: 1.3rem;
+  }
+
+  .muse-technologies-octocat {
+    grid-column-start: 3;
+    grid-row-start: 2;
+
+    justify-self: start;
+  }
+}
+@include mediaLg {
+  .projects-muse {
+    height: 125vh;
+    grid-template-columns: 0.2fr 1fr 3fr 0.3fr 0.2fr;
+    grid-template-rows: 0.3fr 0.2fr 1fr 0.5fr;
+  }
+
+  .projects-heading {
+    align-self: start;
+    font-size: 1.7rem;
+  }
+
+  .muse-heading {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: start;
+  }
+
+  .muse-description {
+    align-self: start;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  .muse-image {
+    grid-row-start: 3;
+    // align-self: center;
+  }
+
+  //   .muse-description-text {
+  //     grid-column-start: 1;
+  //     grid-column-end: 3;
+  //     grid-row-start: 2;
+  //     grid-row-end: 3;
+  //   }
+
+  .muse-technologies {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    align-self: center;
+    font-size: 1.4rem;
+  }
+
+  .muse-technologies-octocat {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    justify-self: end;
+    align-self: start;
+  }
+}
+@include mediaXl {
+}
