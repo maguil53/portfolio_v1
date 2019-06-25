@@ -2,7 +2,8 @@ $light-grey: rgb(162, 162, 162);
 
 .projects-container {
   background: rgb(31, 95, 168);
-  height: 210vh;
+  // height: 210vh;
+  height: 100%;
 
   display: grid;
   align-items: center;
@@ -150,11 +151,6 @@ $light-grey: rgb(162, 162, 162);
   grid-column-start: 2;
   grid-row-start: 2;
   grid-row-end: 4;
-}
-
-.acm-image img {
-  width: 85%;
-  height: auto;
 }
 
 .acm-description {

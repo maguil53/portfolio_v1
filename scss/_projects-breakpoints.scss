@@ -3,6 +3,7 @@
     width: 100%;
     height: auto;
   }
+
   // ***************
   // For some reason, this isn't working.
   // All the changes below aren't being updated in page.
@@ -60,7 +61,7 @@
 
 @include mediaMd {
   .projects-muse {
-    height: 160vh;
+    height: 165vh;
 
     grid-template-columns: 30px 0.8fr 1fr 30px;
     grid-template-rows: 0.2fr 0.2fr 0.8fr 1fr;
@@ -89,6 +90,7 @@
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 4;
+    font-size: 1.3rem;
   }
   .muse-image {
     grid-row-start: 3;
@@ -97,6 +99,11 @@
     grid-column-end: 3;
 
     // align-self: center;
+  }
+
+  .muse-image img {
+    width: 80%;
+    height: auto;
   }
 
   // **************
@@ -120,6 +127,56 @@
     grid-column-start: 3;
     grid-row-start: 2;
 
+    justify-self: start;
+  }
+
+  // ACM Section
+
+  .projects-acm {
+    height: 170vh;
+
+    grid-template-columns: 30px 0.8fr 1fr 30px;
+    grid-template-rows: 0.2fr 0.4fr 1fr;
+  }
+
+  .acm-heading {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    font-size: 3rem;
+    justify-self: start;
+  }
+
+  .acm-description {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    margin-left: -4px;
+    font-size: 1.3rem;
+  }
+  .acm-image {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .acm-image img {
+    width: 80%;
+    height: auto;
+  }
+
+  .acm-technologies {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    align-self: start;
+    margin-left: 15px;
+    font-size: 1.3rem;
+  }
+
+  .acm-technologies-octocat {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    align-self: center;
     justify-self: start;
   }
 }
@@ -170,6 +227,45 @@
     grid-row-start: 2;
     justify-self: end;
     align-self: start;
+  }
+
+  // ACM section
+  .projects-acm {
+    height: 140vh;
+    grid-template-columns: 0.2fr 1.3fr 3fr 0.3fr 0.2fr;
+    grid-template-rows: 0.3fr 0.2fr 1fr 0.5fr;
+  }
+
+  .acm-heading {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    font-size: 3.5rem;
+    justify-self: start;
+  }
+
+  .acm-description {
+    align-self: start;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .acm-image {
+    grid-row-start: 2;
+    // align-self: center;
+  }
+  .acm-technologies {
+    grid-column-start: 3;
+    grid-row-start: 1;
+
+    font-size: 1.4rem;
+    align-self: center;
+  }
+
+  .acm-technologies-octocat {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    justify-self: end;
+    align-self: center;
   }
 }
 @include mediaXl {
