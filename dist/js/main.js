@@ -1,4 +1,3 @@
-// New approach.
 // Create a class called .blur-glass but don't assign it to any element (yet).
 
 // You will create a onClick listener here (or checked == true) to add this class dynamically
@@ -11,6 +10,39 @@ let header = document.getElementsByTagName("header");
 let showBlur = false;
 
 hamburger.addEventListener("click", addBlur);
+
+const home = document.getElementById("home");
+const about = document.getElementById("about");
+const projects = document.getElementById("projects");
+const contact = document.getElementById("contact");
+
+home.addEventListener("click", function(e) {
+  e.preventDefault();
+  document.querySelector(".container").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+about.addEventListener("click", function(e) {
+  e.preventDefault();
+  document.querySelector(".about-container").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+projects.addEventListener("click", function(e) {
+  e.preventDefault();
+  document.querySelector(".projects-container").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+contact.addEventListener("click", function(e) {
+  e.preventDefault();
+  document.querySelector(".contact-container").scrollIntoView({
+    behavior: "smooth"
+  });
+});
 
 function addBlur() {
   if (!showBlur) {

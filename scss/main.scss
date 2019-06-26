@@ -28,6 +28,10 @@ html {
   font-family: "Courier New", Courier, monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: rgb(31, 95, 168);
   // background: linear-gradient(
@@ -64,7 +68,7 @@ body {
 }
 
 .resume-btn {
-  font-weight: bold;
+  // font-weight: bold;
   font-size: 2rem;
   position: relative;
   z-index: 10;
@@ -79,16 +83,22 @@ body {
   // border: 1.5px white solid;
   border: black;
   padding: 0.7rem;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
   border-radius: 10px;
 
-  color: black;
-  background: rgba(255, 255, 255, 0.7);
+  // color: black;
+  // background: rgba(255, 255, 255, 0.7);
+  color: white;
+  background: rgba(0, 0, 0, 1);
 }
 
 .resume-btn a:hover {
-  border: 1px black solid;
-  color: black;
-  background: rgba(255, 255, 255, 0.9);
+  // border: 1px black solid;
+  // color: black;
+  // background: rgba(255, 255, 255, 0.9);
+  color: white;
+  background: rgb(23, 23, 23);
 }
 
 // Made relative so we can make ::before and ::after absolute and move elements RELATIVE to .main div
