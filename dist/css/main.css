@@ -365,11 +365,21 @@ nav {
   justify-content: center;
   align-items: center; }
 
-#linkedin {
-  width: auto;
-  height: 80%;
+.contact-container a {
+  display: inline-block;
+  height: 90%; }
+
+.contact-container a:nth-child(2) {
   margin-left: 5%;
   margin-right: 5%; }
+
+#contact-github {
+  width: auto;
+  height: 80%; }
+
+#linkedin {
+  width: auto;
+  height: 80%; }
 
 #resume {
   width: auto;
@@ -413,12 +423,35 @@ body {
   font-size: 50px;
   height: 100vh; }
 
+.resume-btn {
+  font-weight: bold;
+  font-size: 2rem;
+  position: relative;
+  z-index: 10;
+  justify-self: center;
+  align-self: end;
+  margin-right: 9%; }
+
+.resume-btn a {
+  text-decoration: none;
+  border: black;
+  padding: 0.7rem;
+  border-radius: 10px;
+  color: black;
+  background: rgba(255, 255, 255, 0.7); }
+
+.resume-btn a:hover {
+  border: 1px black solid;
+  color: black;
+  background: rgba(255, 255, 255, 0.9); }
+
 .main {
   position: relative;
   z-index: 10; }
 
 #main-description {
-  margin-left: 35px; }
+  margin-top: 5%;
+  margin-left: 14%; }
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -760,7 +793,9 @@ body {
     grid-column-start: 3;
     grid-row-start: 1;
     align-self: center;
-    justify-self: start; } }
+    justify-self: start; }
+  .projects-separator {
+    grid-column-end: 4; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects-muse {
@@ -815,3 +850,27 @@ body {
     grid-row-start: 1;
     justify-self: end;
     align-self: center; } }
+
+@media screen and (max-width: 768px) {
+  #contact-github {
+    width: auto;
+    height: 65%; }
+  #linkedin {
+    width: auto;
+    height: 65%; }
+  #resume {
+    width: auto;
+    height: 65%; }
+  .resume-btn {
+    font-size: 1.4rem; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  #contact-github {
+    width: auto;
+    height: 65%; }
+  #linkedin {
+    width: auto;
+    height: 65%; }
+  #resume {
+    width: auto;
+    height: 65%; } }

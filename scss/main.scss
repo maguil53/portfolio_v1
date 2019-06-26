@@ -63,6 +63,34 @@ body {
   height: 100vh;
 }
 
+.resume-btn {
+  font-weight: bold;
+  font-size: 2rem;
+  position: relative;
+  z-index: 10;
+  justify-self: center;
+  align-self: end;
+  // margin-top: 10%;
+  margin-right: 9%;
+}
+
+.resume-btn a {
+  text-decoration: none;
+  // border: 1.5px white solid;
+  border: black;
+  padding: 0.7rem;
+  border-radius: 10px;
+
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.resume-btn a:hover {
+  border: 1px black solid;
+  color: black;
+  background: rgba(255, 255, 255, 0.9);
+}
+
 // Made relative so we can make ::before and ::after absolute and move elements RELATIVE to .main div
 .main {
   position: relative;
@@ -71,7 +99,8 @@ body {
 }
 
 #main-description {
-  margin-left: 35px;
+  margin-top: 5%;
+  margin-left: 14%;
 }
 
 .animated {
@@ -161,3 +190,4 @@ body {
 
 @import "media-queries";
 @import "projects-breakpoints";
+@import "contact-breakpoints";

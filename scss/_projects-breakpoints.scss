@@ -187,6 +187,10 @@
     align-self: center;
     justify-self: start;
   }
+
+  .projects-separator {
+    grid-column-end: 4;
+  }
 }
 @include mediaLg {
   .projects-muse {

@@ -13,11 +13,24 @@
   align-items: center;
 }
 
+.contact-container a {
+  display: inline-block;
+  height: 90%;
+}
+
+.contact-container a:nth-child(2) {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#contact-github {
+  width: auto;
+  height: 80%;
+}
+
 #linkedin {
   width: auto;
   height: 80%;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 #resume {
