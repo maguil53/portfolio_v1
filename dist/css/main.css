@@ -211,7 +211,6 @@ nav {
 
 .projects-container {
   background: #1f5fa8;
-  background: #1f5fa8;
   background: linear-gradient(180deg, #1f5fa8 0%, #1f5fa8 20%, black 95%);
   height: 210vh;
   display: grid;
@@ -360,7 +359,17 @@ nav {
   background-color: black;
   bottom: 0;
   position: relative;
-  z-index: 100; }
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+#linkedin {
+  width: auto;
+  height: 80%;
+  margin-left: 5%;
+  margin-right: 5%; }
 
 #resume {
   width: auto;
@@ -539,7 +548,6 @@ body {
 
 @media screen and (max-width: 768px) {
   .projects-container {
-    height: 340vh;
     background: linear-gradient(180deg, #1f5fa8 0%, #1f5fa8 80%, black 90%); }
   .body {
     background: none; }
@@ -672,12 +680,13 @@ body {
     height: auto; } }
 
 @media screen and (max-width: 768px) {
+  .projects-container {
+    height: 360vh; }
   .projects-muse {
-    height: 165vh;
+    height: 180vh;
     grid-template-columns: 30px 0.8fr 1fr 30px;
-    grid-template-rows: 0.2fr 0.2fr 0.8fr 1fr; }
+    grid-template-rows: 0.8fr 0.8fr 2.4fr 6fr; }
   .projects-heading {
-    align-self: start;
     justify-self: center;
     font-size: 1.6rem;
     margin-bottom: 20px;
@@ -689,7 +698,8 @@ body {
     grid-column-start: 2;
     grid-row-start: 2;
     font-size: 3.6rem;
-    justify-self: start; }
+    justify-self: start;
+    align-self: end; }
   .muse-description {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -699,24 +709,28 @@ body {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 2;
-    grid-column-end: 3; }
+    grid-column-end: 3;
+    align-self: center; }
   .muse-image img {
     width: 80%;
     height: auto; }
   .muse-technologies {
     grid-column-start: 3;
     grid-row-start: 3;
-    align-self: start;
+    align-self: center;
     margin-left: 15px;
+    margin-bottom: 40%;
     font-size: 1.3rem; }
   .muse-technologies-octocat {
+    margin-bottom: 8%;
     grid-column-start: 3;
     grid-row-start: 2;
-    justify-self: start; }
+    justify-self: start;
+    align-self: center; }
   .projects-acm {
     height: 170vh;
     grid-template-columns: 30px 0.8fr 1fr 30px;
-    grid-template-rows: 0.2fr 0.4fr 1fr; }
+    grid-template-rows: 0.8fr 1fr 3fr; }
   .acm-heading {
     grid-column-start: 2;
     grid-row-start: 1;
