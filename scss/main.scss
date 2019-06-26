@@ -2,6 +2,7 @@
 @import "navbar";
 @import "about";
 @import "projects";
+@import "contact";
 
 * {
   margin: 0;
@@ -29,6 +30,12 @@ html {
 
 body {
   background: rgb(31, 95, 168);
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(31, 95, 168, 1) 0%,
+  //   rgba(31, 95, 168, 1) 45%,
+  //   rgba(0, 0, 0, 1) 80%
+  // );
 }
 
 // Initially, this class is not assigned to any element

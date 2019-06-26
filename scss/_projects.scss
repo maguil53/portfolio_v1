@@ -2,13 +2,29 @@ $light-grey: rgb(162, 162, 162);
 
 .projects-container {
   background: rgb(31, 95, 168);
-  // height: 210vh;
-  height: 100%;
+  background: rgb(31, 95, 168);
+  background: linear-gradient(
+    180deg,
+    rgba(31, 95, 168, 1) 0%,
+    rgba(31, 95, 168, 1) 20%,
+    rgba(0, 0, 0, 1) 95%
+  );
+  height: 210vh;
 
   display: grid;
   align-items: center;
   justify-items: center;
 }
+
+// body {
+//   // background: rgb(31, 95, 168);
+//   background: linear-gradient(
+//     180deg,
+//     rgba(31, 95, 168, 1) 0%,
+//     rgba(31, 95, 168, 1) 45%,
+//     rgba(0, 0, 0, 1) 80%
+//   );
+// }
 
 .projects-muse {
   border-top-left-radius: 10px;
