@@ -21,8 +21,9 @@ header {
   transition: filter 250ms ease-in-out; }
 
 .logo {
-  margin-left: 1em;
-  margin-top: 0.5em; }
+  margin-top: 1.2em;
+  height: 48%;
+  width: auto; }
 
 nav {
   background: #262626;
@@ -43,11 +44,11 @@ nav {
     padding: 0;
     list-style: none; }
   nav li {
-    margin-bottom: 3em;
+    margin-bottom: 3.5em;
     margin-left: 1em; }
   nav a {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-decoration: none; }
 
 .nav-toggle {
@@ -417,7 +418,8 @@ body {
   transition: filter 250ms ease-in-out; }
 
 .main-title {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  margin-top: 4%; }
 
 .container {
   display: grid;
@@ -595,7 +597,7 @@ body {
   .logo {
     grid-column: 1 / span 1;
     justify-self: start;
-    margin-left: 1em; }
+    margin-left: 2em; }
   .about-content {
     height: 90vh;
     grid-template-columns: 30px 2fr 1fr 2fr 30px; }
@@ -648,7 +650,7 @@ body {
   .logo {
     grid-column: 1 / span 1;
     justify-self: start;
-    margin-left: 1em; }
+    margin-left: 2em; }
   .about-content {
     height: 100vh; }
   .about-intro {
