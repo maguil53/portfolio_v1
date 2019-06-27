@@ -1,2 +1,6 @@
 node_modules
 background-img-note.txt
+scss
+package-lock.json
+package.json
+.gitignore
